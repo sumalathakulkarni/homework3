@@ -11,28 +11,28 @@ from calculator.calculation import Calculation
 class Calculator:
     """Calculator class creates and performs a calculation operation passed as a parameter and returns the result."""
     @staticmethod
-    def execute(firstinput: Decimal, secondinput: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
+    def execute(first_input: Decimal, second_input: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
         """Executes the operation"""
-        calculation = Calculation.create(firstinput, secondinput, operation)
+        calculation = Calculation.create(first_input, second_input, operation)
         Calculations.add_calculation(calculation)
         return calculation.perform()
 
     @staticmethod
-    def add(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+    def add(first_input: Decimal, second_input: Decimal) -> Decimal:
         """Performs addition operation"""
-        return Calculator.execute(firstinput, secondinput, add)
+        return Calculator.execute(first_input, second_input, add)
 
     @staticmethod
-    def subtract(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+    def subtract(first_input: Decimal, second_input: Decimal) -> Decimal:
         """Performs subtraction operation"""
-        return Calculator.execute(firstinput, secondinput, subtract)
+        return Calculator.execute(first_input, second_input, subtract)
 
     @staticmethod
-    def multiply(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+    def multiply(first_input: Decimal, second_input: Decimal) -> Decimal:
         """Performs multiplication operation"""
-        return Calculator.execute(firstinput, secondinput, multiply)
+        return Calculator.execute(first_input, second_input, multiply)
 
     @staticmethod
-    def divide(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+    def divide(first_input: Decimal, second_input: Decimal) -> Decimal:
         """Performs division operation"""
-        return Calculator.execute(firstinput, secondinput, divide)
+        return Calculator.execute(first_input, second_input, divide)
