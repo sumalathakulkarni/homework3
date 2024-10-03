@@ -2,20 +2,20 @@
 """Calculation operations"""
 from decimal import Decimal
 # Defining the functions with type hints for input parameters and return output
-def add(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+def add(first_input: Decimal, second_input: Decimal) -> Decimal:
     """add operation"""
-    return firstinput + secondinput
+    return first_input + second_input
 
-def subtract(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+def subtract(first_input: Decimal, second_input: Decimal) -> Decimal:
     """subtract operation"""
-    return firstinput - secondinput
+    return first_input - second_input
 
-def multiply(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+def multiply(first_input: Decimal, second_input: Decimal) -> Decimal:
     """multiply operation"""
-    return firstinput * secondinput
+    return first_input * second_input
 
-def divide(firstinput: Decimal, secondinput: Decimal) -> Decimal:
+def divide(first_input: Decimal, second_input: Decimal) -> Decimal:
     """divide operation"""
-    if secondinput == 0:
+    if second_input == 0:
         raise ValueError("Divide by zero error")
-    return firstinput / secondinput
+    return first_input / second_input
