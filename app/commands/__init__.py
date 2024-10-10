@@ -34,3 +34,9 @@ class CommandHandler:
                 print(f"Error: {e}")
         else:
             print(f"Unknown command: {command_name}")
+    
+    def get_registered_commands(self):
+        # Return the list of registered command names
+        return list(self.commands.keys())
+    
+    
