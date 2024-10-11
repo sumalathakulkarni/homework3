@@ -9,8 +9,10 @@ from app.commands.menu import MenuCommand
 #add, subtract, multiply, and divide
 
 class App:
-    def __init__(self): # Constructor
+    def __init__(self,  input_func=input, output_func=print): # Constructor
         self.command_handler = CommandHandler()
+        self.input_func = input_func  # Allow input function to be passed for testability
+        self.output_func = output_func
 
 
     def start(self):
@@ -26,5 +28,12 @@ class App:
         print(self.command_handler.commands["menu"].execute())
 
         print("Type 'exit' to exit.")
-        while True:  #REPL Read, Evaluate, Print, Loop
-            self.command_handler.execute_command(input(">>> ").strip())
+        while True:
+            try:
+                user_input = input(">>> ").strip()
+                if user_input == 'exit':
+                    print("Exiting...")
+                    break
+                self.command_handler.execute_command(user_input)
+            except Exception as e:
+                print(f"An error occurred: {e}")

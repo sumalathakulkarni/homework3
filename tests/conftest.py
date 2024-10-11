@@ -1,7 +1,7 @@
 '''Generate test data'''
 from decimal import Decimal
 from faker import Faker
-import pytest
+
 from calculator.operations import add, subtract, multiply, divide
 
 fake = Faker()
@@ -21,17 +21,13 @@ def generate_test_data(num_records):
         operation_name = fake.random_element(elements=list(operation_mappings.keys()))
         operation_func = operation_mappings[operation_name]
 
-        # Ensure b is not zero for divide operation to prevent division by zero in expected calculation
-        if operation_func.__name__ == 'divide':
-            second_input = Decimal('1') if second_input == Decimal('0') else second_input
-
         try:
             if operation_func.__name__ == 'divide' and second_input == Decimal('0'):
-                expected = "ZeroDivisionError"
+                expected = "Cannot divide by zero"
             else:
                 expected = operation_func(first_input, second_input)
         except ZeroDivisionError:
-            expected = "ZeroDivisionError"
+            expected = "Cannot divide by zero"
 
         yield first_input, second_input, operation_name, operation_func, expected
 

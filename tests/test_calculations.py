@@ -55,7 +55,7 @@ def test_get_latest(setup_calculations):
     # Assert that the latest calculation matches the expected values,
     # specifically the operands and operation used in the last added calculation
     # in the setup_calculations fixture.
-    assert latest.firstinput == Decimal('20') and latest.secondinput == Decimal('3'), "Did not get the correct latest calculation"
+    assert latest.first_input == Decimal('20') and latest.second_input == Decimal('3'), "Did not get the correct latest calculation"
 
 def test_find_by_operation(setup_calculations):
     """Test finding calculations in the history by operation type."""
