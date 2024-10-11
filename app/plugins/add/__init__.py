@@ -5,7 +5,7 @@ from calculator.calculation import Calculation
 from calculator.operations import add, subtract
 from decimal import Decimal
 
-class AddCommand:
+class AddCommand(Command):
     def execute(self, *args):
         if len(args) != 2:
             return "Add Command requires two arguments."

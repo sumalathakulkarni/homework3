@@ -4,7 +4,7 @@ from calculator.calculation import Calculation
 from calculator.operations import divide
 from decimal import Decimal
 
-class DivideCommand:
+class DivideCommand(Command):
     def execute(self, *args):
         if len(args) != 2:
             return "Divide Command requires two arguments."
