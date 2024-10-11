@@ -1,20 +1,11 @@
 
 import sys
 from app.commands import Command
-
-
-class MultiplyCommand(Command):
-    def execute(self):
-        print(f'I WIll send something to Multiply')
-
-
-import sys
-from app.commands import Command
 from calculator.calculation import Calculation
 from calculator.operations import multiply
 from decimal import Decimal
 
-class MultiplyCommand:
+class MultiplyCommand(Command):
     def execute(self, *args):
         if len(args) != 2:
             return "Multiply Command requires two arguments."

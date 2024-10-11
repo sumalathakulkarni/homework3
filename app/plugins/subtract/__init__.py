@@ -4,7 +4,7 @@ from calculator.calculation import Calculation
 from calculator.operations import subtract
 from decimal import Decimal
 
-class SubtractCommand:
+class SubtractCommand(Command):
     def execute(self, *args):
         if len(args) != 2:
             return "Subtract Command requires two arguments."
