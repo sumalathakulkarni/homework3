@@ -1,0 +1,8 @@
+2024-10-18 21:58:03,968 - root - INFO - Logging configured.
+2024-10-18 21:58:03,978 - root - INFO - Command 'add' from plugin 'add' registered.
+2024-10-18 21:58:03,979 - root - INFO - Command 'divide' from plugin 'divide' registered.
+2024-10-18 21:58:03,979 - root - INFO - Command 'exit' from plugin 'exit' registered.
+2024-10-18 21:58:03,980 - root - INFO - Command 'menu' from plugin 'menu' registered.
+2024-10-18 21:58:03,980 - root - INFO - Command 'multiply' from plugin 'multiply' registered.
+2024-10-18 21:58:03,981 - root - INFO - Command 'subtract' from plugin 'subtract' registered.
+2024-10-18 21:58:10,506 - root - INFO - Performing add operation for (1,2)
